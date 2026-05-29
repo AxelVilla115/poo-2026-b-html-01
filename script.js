@@ -7,7 +7,11 @@ btn.addEventListener("click", () => {
     const contact = document.getElementById("contact");
     const mensaje = document.createElement("p");
     const textfield = document.getElementById("textfield");
-    mensaje.textContent = textfield.value;
+    if (textfield.value == "") {
+        mensaje.textContent = "Mensaje Generico";
+    } else {
+        mensaje.textContent = textfield.value;
+    }
     mensaje.style.color = "#d3d3d3";
     mensaje.style.fontWeight = "bold";
     contact.appendChild(mensaje);
